@@ -75,11 +75,6 @@
                             </div>
                             <div id="nameDiv" class="control-group">
                                 <div class="controls">
-                                    <input id="avatar" name="avatar" type="password" placeholder="Avatar"><br><br>
-                                </div>
-                            </div>
-                            <div id="nameDiv" class="control-group">
-                                <div class="controls">
                                     <input type="email" placeholder="Email"><br><br>
                                 </div>
                             </div>

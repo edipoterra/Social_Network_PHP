@@ -1,0 +1,28 @@
+CREATE TABLE `usuario` (
+  `id_usuario` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(60) NOT NULL DEFAULT '',
+  `login` varchar(25) NOT NULL DEFAULT '',
+  `senha` varchar(40) NOT NULL DEFAULT '',
+  `foto` varchar(100) DEFAULT NULL,
+  `email` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`id_usuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `post` (
+  `id_post` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `data` date NOT NULL,
+  `titulo` varchar(40) NOT NULL DEFAULT '',
+  `texto` varchar(500) DEFAULT '',
+  `foto` varchar(100) DEFAULT NULL,
+  `id_usuario` int(11) NOT NULL,
+  PRIMARY KEY (`id_post`),
+  CONSTRAINT `post_ibfk_1` FOREIGN KEY (`id_post`) REFERENCES `usuario` (`id_usuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `amigo` (
+  `id_usuario` int(11) NOT NULL DEFAULT '0',
+  `id_amigo` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_usuario`,`id_amigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
