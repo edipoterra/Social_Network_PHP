@@ -1,3 +1,3 @@
 <?php
-require("view/cadastro.php");
+require("view/viewCadastro.php");
 ?>

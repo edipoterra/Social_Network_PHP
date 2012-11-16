@@ -12,54 +12,8 @@
         <![endif]-->
 
         <!-- Le styles -->
-        <link href="../assets/css/bootstrap.css" rel="stylesheet">
-        <style type="text/css">
-        /* Override some defaults */
-            html, body {
-                background-color: #eee;
-            }
-            body {
-                padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
-            }
-            .container > footer p {
-                text-align: center; /* center align it with the container */
-            }
-            .container {
-                width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
-            }
-            /* The white background content wrapper */
-            .container > .content {
-                background-color: #fff;
-                padding: 20px;
-                margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-                -webkit-border-radius: 0 0 6px 6px;
-                -moz-border-radius: 0 0 6px 6px;
-                border-radius: 0 0 6px 6px;
-                -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-                -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-                box-shadow: 0 1px 2px rgba(0,0,0,.15);
-            }
-            /* Page header tweaks */
-            .page-header {
-                background-color: #f5f5f5;
-                padding: 20px 20px 10px;
-                margin: -20px -20px 20px;
-            }
-            /* Styles you shouldn't keep as they are for displaying this base example only */
-            .content .span10,
-            .content .span4 {
-                min-height: 500px;
-            }
-            /* Give a quick and non-cross-browser friendly divider */
-            .content .span4 {
-                margin-left: 0;
-                padding-left: 19px;
-                border-left: 1px solid #eee;
-            }
-            .topbar .btn {
-                border: 0;
-            }
-        </style>
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/friendface.css" rel="stylesheet">
         <!-- Le fav and touch icons -->
         <link rel="shortcut icon" href="images/favicon.ico">
         <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -71,25 +25,37 @@
         <div class="topbar">
             <div class="fill">
                 <div class="container">
-                    <a class="brand" href="#">Project name</a>
+                    <a class="brand" href="#">Friend Face</a>
                     <ul class="nav">
                         <li><a href="#modalAbout" data-toggle="modal">About</a></li>
                         <li><a href="#modalContact" data-toggle="modal">Contact</a></li>
                     </ul>
+                    <form class="pull-right" id="loginTop" action="login" method="post">
+                        <input class="input-small" id="loginUser" name="loginUser" type="text" placeholder="Username" maxlength="25">
+                        <input class="input-small" id="loginPassword" name="loginPassword" type="password" placeholder="Password">
+                        <button class="btn" type="submit">Login</button>
+                    </form>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="content">
                 <div class="page-header">
-                    <h1>Page name <small>Supporting text or tagline</small></h1>
+                    <h1>Friend Face <small>Esta é a sua rede social! Só que não</small></h1>
                 </div>
                 <div class="row">
                     <div class="span10">
-                        <h2>Main content</h2>
+						
                     </div>
                     <div class="span4">
-                        <h3>Secondary content</h3>
+                        <h3>Cadastre-se</h3>
+                        <form class="center70" id="cadastro" action="controller/contCadastro" method="post">
+                                <input id="nome" name="nome" type="text" placeholder="Nome"><br><br>
+                                <input id="usuario" name="usuario" type="text" placeholder="Usuario" maxlength="25"><br><br>
+                                <input id="password" name="password" type="password" placeholder="Senha"><br><br>
+                                <input id="email" name="email" type="text" placeholder="Email"><br><br>
+                                <button class="btn" type="submit">Cadastrar</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -158,14 +124,14 @@
 
     </div> <!-- /container -->
 
-    <script src="../assets/js/jquery.min.js" type="text/javascript"></script>
-    <script src="../assets/js/bootstrap-modal.js" type="text/javascript"></script>
-    <script src="../assets/js/bootstrap-tooltip.js" type="text/javascript"></script>
-    <script src="../assets/js/bootstrap-popover.js" type="text/javascript"></script>
-    <script src="../assets/js/bootstrap-tab.js" type="text/javascript"></script>
-    <script src="../assets/js/timuork-general.js" type="text/javascript"></script>
-    <script src="../assets/js/timuork-popoverHandler.js" type="text/javascript"></script>
-    <script src="../assets/js/timuork-home.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap-tooltip.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap-popover.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap-tab.js" type="text/javascript"></script>
+    <script src="assets/js/timuork-general.js" type="text/javascript"></script>
+    <script src="assets/js/timuork-popoverHandler.js" type="text/javascript"></script>
+    <script src="assets/js/timuork-home.js" type="text/javascript"></script>
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-30009537-1']);
