@@ -49,7 +49,7 @@
                     </div>
                     <div class="span4">
                         <h3>Cadastre-se</h3>
-                        <form class="center70" id="cadastro" action="controller/contCadastro" method="post">
+                        <form class="center70" id="cadastro" action="controller/contCadastro.php" method="post">
                                 <input id="nome" name="nome" type="text" placeholder="Nome"><br><br>
                                 <input id="usuario" name="usuario" type="text" placeholder="Usuario" maxlength="25"><br><br>
                                 <input id="password" name="password" type="password" placeholder="Senha"><br><br>
@@ -120,6 +120,9 @@
         </div> 
         <footer>
             <p>&copy; Company 2012</p>
+			<?php
+				echo $_SERVER['QUERY_STRING'];
+			?>
         </footer>
 
     </div> <!-- /container -->
